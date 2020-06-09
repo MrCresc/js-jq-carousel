@@ -27,12 +27,12 @@ function nextImage() {
   var firstCircle = $('.nav i.first')
   // Eseguo eccezione della funzione se visualizzo l'ultima immagine per tornare alla prima
   if (activeImg.hasClass('last')) {
-    firstImg.addClass('active')
+    firstImg.fadeIn(100).addClass('active')
     firstCircle.addClass('active')
   }
   // Eseguo funzione in caso di "normalità"
-  activeImg.removeClass('active')
-  activeImg.next('img').addClass('active')
+  activeImg.fadeOut(0).removeClass('active')
+  activeImg.next('img').fadeIn(100).addClass('active')
   activeCircle.removeClass('active')
   activeCircle.next('i').addClass('active')
 }
@@ -44,12 +44,12 @@ function prevImage() {
   var lastCircle = $('.nav i.last')
   // Eseguo eccezione della funzione se visualizzo la prima immagine per tornare all'ultima
   if (activeImg.hasClass('first')) {
-    lastImg.addClass('active')
+    lastImg.fadeIn(100).addClass('active')
     lastCircle.addClass('active')
   }
   // Eseguo funzione in caso di "normalità"
-  activeImg.removeClass('active')
-  activeImg.prev('img').addClass('active')
+  activeImg.fadeOut(0).removeClass('active')
+  activeImg.prev('img').fadeIn(100).addClass('active')
   activeCircle.removeClass('active')
   activeCircle.prev('i').addClass('active')
 }
